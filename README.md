@@ -1,11 +1,12 @@
 # CodeChallengeApi
 ## Setup
+_(ETA: 25~30 mins)_
 * Use [Visual Studio Code](https://code.visualstudio.com/). You can also use Visual Studio 2022 if you have it, but here I will cover VS Code.
-* Install the official C# extension from Microsoft for VS Code. This is available from the 'Extensions' tab in VS Code.
+* Install the official [C#](https://code.visualstudio.com/docs/languages/csharp) extension from Microsoft for VS Code. This is available from the 'Extensions' tab in VS Code.
 * Install the latest version of the .NET 6 SDK from this link: https://dotnet.microsoft.com/en-us/download/dotnet/6.0
   * Verify the installation with `dotnet --list-sdks`
 * Download the code from this repository as a ZIP. You can also clone it or make your own fork, but it's not necessary.
-* Open the root directory in VS Code, and start debugging by pressing "F5".
+* Open the root folder in VS Code, and start debugging by pressing "F5".
 * In a browser, navigate to the URL https://localhost:7008/swagger
 * If the Swagger UI now renders, you are good to go.
 
