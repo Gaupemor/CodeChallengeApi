@@ -1,7 +1,7 @@
 # CodeChallengeApi
 ## Setup
 * Use [Visual Studio Code](https://code.visualstudio.com/). You can also use Visual Studio 2022 if you have it, but here I will cover VS Code.
-  * Optional: Install the official C# extension from Microsoft for VS Code. 
+* Install the official C# extension from Microsoft for VS Code. This is available from the 'Extensions' tab in VS Code.
 * Install the latest version of the .NET 6 SDK from this link: https://dotnet.microsoft.com/en-us/download/dotnet/6.0
   * Verify the installation with `dotnet --list-sdks`
 * Download the code from this repository as a ZIP. You can also clone it or make your own fork, but it's not necessary.
