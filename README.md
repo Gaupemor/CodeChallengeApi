@@ -1,12 +1,12 @@
 # CodeChallengeApi
 ## Setup
-* Use Visual Studio Code. You can also use Visual Studio 2022 if you have it, but here I will cover VS Code.
+* Use [Visual Studio Code](https://code.visualstudio.com/). You can also use Visual Studio 2022 if you have it, but here I will cover VS Code.
   * Optional: Install the official C# extension from Microsoft for VS Code. 
 * Install the latest version of the .NET 6 SDK from this link: https://dotnet.microsoft.com/en-us/download/dotnet/6.0
   * Verify the installation with `dotnet --list-sdks`
-* Download the code as a ZIP from this repository. You can also clone it or make your own fork, but it's not necessary.
+* Download the code from this repository as a ZIP. You can also clone it or make your own fork, but it's not necessary.
 * Open the root directory in VS Code, and start debugging by pressing "F5".
-* In a browser, go to "localhost:7008/swagger"
+* In a browser, navigate to the URL https://localhost:7008/swagger
 * If the Swagger UI now renders, you are good to go.
 
 ## Introduction
@@ -42,4 +42,4 @@ Add an API method for returning all customers
 ## Challenge 5
 Change the code so that newly added customers are persisted in the App's memory and returned when you call the "return all" method. 
 
-You should only have to change one line of code in order to achieve this.
+**Hint:** You should only have to change one line of code in order to achieve this.
