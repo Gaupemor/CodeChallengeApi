@@ -4,7 +4,7 @@
   * Optional: Install the official C# extension from Microsoft for VS Code. 
 * Install the latest version of the .NET 6 SDK from this link: https://dotnet.microsoft.com/en-us/download/dotnet/6.0
   * Verify the installation with `dotnet --list-sdks`
-* Make your own fork of this repository, or even simpler just download the code.
+* Download the code as a ZIP from this repository. You can also clone it or make your own fork, but it's not necessary.
 * Open the root directory in VS Code, and start debugging by pressing "F5".
 * In a browser, go to "localhost:7008/swagger"
 * If the Swagger UI now renders, you are good to go.
