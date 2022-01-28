@@ -18,7 +18,19 @@ namespace ChallengeApi.Controllers
         }
 
         [HttpGet("{customerId}")]
-        public Customer Get(string customerId)
+        public Customer? Get(string customerId)
+        {
+            return null;
+        }
+
+        [HttpGet("{customerId}/accounts/{accountId}")]
+        public Account? Get(string customerId, int accountId)
+        {
+            return null;
+        }
+
+        [HttpGet("{customerId}/accounts/balance")]
+        public decimal? GetTotalBalance(string customerId)
         {
             return null;
         }

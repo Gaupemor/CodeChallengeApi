@@ -1,3 +1,9 @@
+/**
+*
+*   Don't make changes to this file
+*
+*/
+
 namespace ChallengeApi.Models
 {
     public class Customer
