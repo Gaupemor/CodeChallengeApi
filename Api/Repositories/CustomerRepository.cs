@@ -14,7 +14,16 @@ namespace ChallengeApi.Api.Repositories
         
         public Customer? FindCustomer(string customerId)
         {
-            return _data.Customers.FirstOrDefault(c => c.CustomerId == customerId);
+            var customers = _data.Customers;
+            foreach (var customer in customers)
+            {
+                if (customer.CustomerId == customerId)
+                {
+                    return customer;
+                }
+            }
+
+            return null;
         }
     }
 }
