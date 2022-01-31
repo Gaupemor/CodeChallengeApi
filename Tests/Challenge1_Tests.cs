@@ -1,8 +1,8 @@
 using NUnit.Framework;
-using ChallengeApi.Models;
-using ChallengeApi.Controllers;
-using ChallengeApi.Repositories;
-using ChallengeApi.Data;
+using ChallengeApi.Api.Controllers;
+using ChallengeApi.Api.Repositories;
+using ChallengeApi.DataModel;
+using ChallengeApi.DataModel.Interfaces;
 
 namespace Tests;
 
@@ -17,7 +17,7 @@ public class Challenge1_Tests
     public void Challenge1_Test1()
     {
         ICustomerRepository customerRepository = new CustomerRepository(new ExampleData());
-        IAccountRepository accountRepository = new AccountRepository();
+        IAccountRepository accountRepository = new AccountRepository(new ExampleData());
         CustomersController customersController = new CustomersController(customerRepository, accountRepository);
 
         Customer? customer = customersController.Get("1");
@@ -30,7 +30,7 @@ public class Challenge1_Tests
     public void Challenge1_Test2()
     {
         ICustomerRepository customerRepository = new CustomerRepository(new ExampleData());
-        IAccountRepository accountRepository = new AccountRepository();
+        IAccountRepository accountRepository = new AccountRepository(new ExampleData());
         CustomersController customersController = new CustomersController(customerRepository, accountRepository);
 
         Customer? customer = customersController.Get("-1");

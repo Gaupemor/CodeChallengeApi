@@ -1,8 +1,8 @@
-using ChallengeApi.Models;
-using ChallengeApi.Repositories;
+using ChallengeApi.DataModel;
+using ChallengeApi.DataModel.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 
-namespace ChallengeApi.Controllers
+namespace ChallengeApi.Api.Controllers
 {
     [Route("customers")]
     [ApiController]
@@ -29,7 +29,7 @@ namespace ChallengeApi.Controllers
             return null;
         }
 
-        [HttpGet("{customerId}/accounts/balance")]
+        [HttpGet("{customerId}/total-balance")]
         public decimal? GetTotalBalance(string customerId)
         {
             return null;

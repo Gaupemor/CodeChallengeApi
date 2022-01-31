@@ -1,14 +1,17 @@
-using ChallengeApi.Models;
+using ChallengeApi.DataModel;
+using ChallengeApi.DataModel.Interfaces;
 
-namespace ChallengeApi.Repositories
+namespace ChallengeApi.Api.Repositories
 {
-    public interface IAccountRepository
-    {
-        Account? FindAccount(int accountId);
-    }
-
     public class AccountRepository : IAccountRepository
     {
+        private readonly IExampleData _data;
+
+        public AccountRepository(IExampleData accountData)
+        {
+            _data = accountData;
+        }
+
         public Account? FindAccount(int accountId)
         {
             throw new NotImplementedException();

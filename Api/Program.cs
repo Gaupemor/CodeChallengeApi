@@ -2,10 +2,10 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 // Repositories
-builder.Services.AddScoped<ChallengeApi.Repositories.ICustomerRepository, ChallengeApi.Repositories.CustomerRepository>();
-builder.Services.AddScoped<ChallengeApi.Repositories.IAccountRepository, ChallengeApi.Repositories.AccountRepository>();
+builder.Services.AddScoped<ChallengeApi.DataModel.Interfaces.ICustomerRepository, ChallengeApi.Api.Repositories.CustomerRepository>();
+builder.Services.AddScoped<ChallengeApi.DataModel.Interfaces.IAccountRepository, ChallengeApi.Api.Repositories.AccountRepository>();
 // Example data
-builder.Services.AddScoped<ChallengeApi.Data.IExampleData, ChallengeApi.Data.ExampleData>(); 
+builder.Services.AddScoped<ChallengeApi.DataModel.Interfaces.IExampleData, ChallengeApi.DataModel.ExampleData>(); 
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle

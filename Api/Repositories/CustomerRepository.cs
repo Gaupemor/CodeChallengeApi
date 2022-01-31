@@ -1,13 +1,8 @@
-using ChallengeApi.Data;
-using ChallengeApi.Models;
+using ChallengeApi.DataModel;
+using ChallengeApi.DataModel.Interfaces;
 
-namespace ChallengeApi.Repositories
+namespace ChallengeApi.Api.Repositories
 {
-    public interface ICustomerRepository
-    {
-        Customer? FindCustomer(string customerId);
-    }
-
     public class CustomerRepository : ICustomerRepository
     {
         private readonly IExampleData _data;

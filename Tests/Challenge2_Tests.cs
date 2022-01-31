@@ -1,24 +1,27 @@
 using NUnit.Framework;
-using ChallengeApi.Models;
-using ChallengeApi.Controllers;
-using ChallengeApi.Repositories;
-using ChallengeApi.Data;
+using ChallengeApi.Api.Controllers;
+using ChallengeApi.Api.Repositories;
+using ChallengeApi.DataModel;
+using ChallengeApi.DataModel.Interfaces;
 
 namespace Tests;
 
 public class Challenge2_Tests
 {
+    ICustomerRepository _customerRepository;
+    IAccountRepository _accountRepository;
+    
     [SetUp]
     public void Setup()
     {
+        _customerRepository = new CustomerRepository(new ExampleData());
+        _accountRepository = new AccountRepository(new ExampleData());
     }
 
     [Test]
     public void Challenge2_Test1()
     {
-        ICustomerRepository customerRepository = new CustomerRepository(new ExampleData());
-        IAccountRepository accountRepository = new AccountRepository();
-        CustomersController customersController = new CustomersController(customerRepository, accountRepository);
+        CustomersController customersController = new CustomersController(_customerRepository, _accountRepository);
 
         Account? account = customersController.Get("1", 1000);
 
@@ -29,9 +32,7 @@ public class Challenge2_Tests
     [Test]
     public void Challenge2_Test2()
     {
-        ICustomerRepository customerRepository = new CustomerRepository(new ExampleData());
-        IAccountRepository accountRepository = new AccountRepository();
-        CustomersController customersController = new CustomersController(customerRepository, accountRepository);
+        CustomersController customersController = new CustomersController(_customerRepository, _accountRepository);
 
         Account? account = customersController.Get("1", 1001);
 
@@ -42,9 +43,7 @@ public class Challenge2_Tests
     [Test]
     public void Challenge2_Test3()
     {
-        ICustomerRepository customerRepository = new CustomerRepository(new ExampleData());
-        IAccountRepository accountRepository = new AccountRepository();
-        CustomersController customersController = new CustomersController(customerRepository, accountRepository);
+        CustomersController customersController = new CustomersController(_customerRepository, _accountRepository);
 
         Account? account = customersController.Get("1", 1002);
 
@@ -54,9 +53,7 @@ public class Challenge2_Tests
     [Test]
     public void Challenge2_Test4()
     {
-        ICustomerRepository customerRepository = new CustomerRepository(new ExampleData());
-        IAccountRepository accountRepository = new AccountRepository();
-        CustomersController customersController = new CustomersController(customerRepository, accountRepository);
+        CustomersController customersController = new CustomersController(_customerRepository, _accountRepository);
 
         Account? account = customersController.Get("-1", 0);
 
